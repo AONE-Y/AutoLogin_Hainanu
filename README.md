@@ -11,3 +11,5 @@ python AutoLogin.py
 ```python
 pip install requests
 ```
+
+如果校园网掉线，大概一分钟内可以重新连接
