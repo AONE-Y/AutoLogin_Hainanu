@@ -43,7 +43,7 @@ if __name__ == '__main__':
             i = auto_login.judge()
             if i:
                 auto_login.login()
-            # time.sleep(60)
+            time.sleep(60)
 
     except:
-        time.sleep(60)
+        time.sleep(600)
