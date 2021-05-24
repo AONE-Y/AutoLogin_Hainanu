@@ -2,6 +2,12 @@
 userId、password和queryString如图所得，
 ![获取相应数据](https://img-blog.csdnimg.cn/20210409204407205.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0VvbV9f,size_16,color_FFFFFF,t_70)
 只需填这三项即可，然后把.py文件放置服务器、或者路由器等运行即可
+如果是linux系统，然后
+```shell
+sh run.sh
+```
+
+或者
 
 ```python
 python AutoLogin.py

@@ -16,9 +16,10 @@ class AutoLogin(object):
         try:
             judge_status = requests.get(url=self.judge_url, headers=self.header, stream=True)
             status = judge_status.raw._connection.sock.getpeername()[0]
-            return status == None
-        except Exception:
             return True
+        except Exception:
+            print("\033[1;31;40m\t网络断开，正在尝试重新认证！！！\033[0m")
+            return False
 
     # 登录校园网
     def login(self):
@@ -41,9 +42,13 @@ if __name__ == '__main__':
     try:
         while (True):
             i = auto_login.judge()
-            if i:
+            if not i:
                 auto_login.login()
             time.sleep(60)
 
     except:
-        time.sleep(600)
+        print("\033[1;31;40m\t校园网认证失败，无法连接到校园网认证服务器，休眠3分钟后再尝试进行认证")
+        print("\033[1;31;40m\t可能的原因：" )
+        print("        \033[1;31;40m\t1.网线未连接好")
+        print("        \033[1;31;40m\t2.校园网服务器出现故障")
+        time.sleep(180)
