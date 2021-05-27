@@ -41,6 +41,7 @@ if __name__ == '__main__':
     auto_login = AutoLogin(url=url, data=data)
     try:
         while (True):
+            print("\t开始工作...")
             i = auto_login.judge()
             if not i:
                 auto_login.login()
