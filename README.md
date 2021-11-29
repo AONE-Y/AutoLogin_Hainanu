@@ -10,7 +10,7 @@ sh run.sh
 或者
 
 ```python
-python AutoLogin.py
+nohup python AutoLogin.py &
 ```
 (需要一直挂在后台,linux可以安装screen创建新窗口后运行后再关闭终端，这样不会终止终端运行的命令，相关安装方法，请百度），如果未安装requests模块，请先
 
